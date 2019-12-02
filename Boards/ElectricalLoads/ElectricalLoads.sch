@@ -6339,6 +6339,8 @@ Adjustable shunt regulator</description>
 <part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+12V" device=""/>
 <part name="P+8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+12V" device=""/>
 <part name="P+9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+12V" device=""/>
+<part name="METER-GND" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2"/>
+<part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6581,6 +6583,13 @@ Adjustable shunt regulator</description>
 <instance part="P+9" gate="1" x="7.62" y="22.86" smashed="yes">
 <attribute name="VALUE" x="5.08" y="17.78" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="METER-GND" gate="G$1" x="177.8" y="50.8" smashed="yes">
+<attribute name="NAME" x="171.45" y="56.515" size="1.778" layer="95"/>
+<attribute name="VALUE" x="171.45" y="45.72" size="1.778" layer="96"/>
+</instance>
+<instance part="GND13" gate="1" x="175.26" y="40.64" smashed="yes">
+<attribute name="VALUE" x="172.72" y="38.1" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -6777,6 +6786,14 @@ Adjustable shunt regulator</description>
 <pinref part="GND3" gate="1" pin="GND"/>
 <wire x1="144.78" y1="-20.32" x2="144.78" y2="-17.78" width="0.1524" layer="91"/>
 <junction x="144.78" y="-17.78"/>
+</segment>
+<segment>
+<pinref part="METER-GND" gate="G$1" pin="2"/>
+<pinref part="METER-GND" gate="G$1" pin="1"/>
+<wire x1="175.26" y1="50.8" x2="175.26" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="GND13" gate="1" pin="GND"/>
+<wire x1="175.26" y1="50.8" x2="175.26" y2="43.18" width="0.1524" layer="91"/>
+<junction x="175.26" y="50.8"/>
 </segment>
 </net>
 <net name="N$5" class="0">
