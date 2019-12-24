@@ -42,6 +42,7 @@ UsedLibrary="/usr/local/google/home/namngo/hobby/MiscBoard/EagleLibs/SparkFun-Re
 UsedLibrary="/usr/local/google/home/namngo/hobby/MiscBoard/EagleLibs/SparkFun-Capacitors.lbr"
 UsedLibrary="/usr/local/google/home/namngo/hobby/MiscBoard/EagleLibs/LM324N.lbr"
 UsedLibrary="/usr/local/google/home/namngo/hobby/MiscBoard/EagleLibs/SparkFun-DiscreteSemi.lbr"
+UsedLibrary="/usr/local/google/home/namngo/hobby/MiscBoard/EagleLibs/CustomParts.lbr"
 
 [Win_1]
 Type="Control Panel"
