@@ -6079,8 +6079,6 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <part name="RS-12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R2512" package3d_urn="urn:adsk.eagle:package:23545/2" value="0.1"/>
 <part name="RS-21" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R2512" package3d_urn="urn:adsk.eagle:package:23545/2" value="0.1"/>
 <part name="RS-22" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R2512" package3d_urn="urn:adsk.eagle:package:23545/2" value="0.1"/>
-<part name="Q1" library="transistor-power" library_urn="urn:adsk.eagle:library:400" deviceset="PMOSFET_N" device="TO220BV" package3d_urn="urn:adsk.eagle:package:29484/3"/>
-<part name="Q2" library="transistor-power" library_urn="urn:adsk.eagle:library:400" deviceset="PMOSFET_N" device="TO220BV" package3d_urn="urn:adsk.eagle:package:29484/3"/>
 <part name="IC1" library="v-reg" library_urn="urn:adsk.eagle:library:409" deviceset="78XXS" device="" package3d_urn="urn:adsk.eagle:package:30342/1"/>
 <part name="IC2" library="linear" library_urn="urn:adsk.eagle:library:262" deviceset="LM324" device="N" package3d_urn="urn:adsk.eagle:package:16407/2"/>
 <part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -6089,6 +6087,8 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <part name="18V" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2"/>
 <part name="12V" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2"/>
 <part name="LOAD-IN" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2"/>
+<part name="Q1" library="transistor-power" library_urn="urn:adsk.eagle:library:400" deviceset="PMOSFET_N" device="TO220BH" package3d_urn="urn:adsk.eagle:package:29490/1"/>
+<part name="Q2" library="transistor-power" library_urn="urn:adsk.eagle:library:400" deviceset="PMOSFET_N" device="TO220BH" package3d_urn="urn:adsk.eagle:package:29490/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -6247,14 +6247,6 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <attribute name="NAME" x="102.6414" y="-16.51" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="107.442" y="-16.51" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="Q1" gate="G$1" x="55.88" y="0" smashed="yes">
-<attribute name="NAME" x="60.96" y="2.54" size="1.778" layer="95"/>
-<attribute name="VALUE" x="60.96" y="0" size="1.778" layer="96"/>
-</instance>
-<instance part="Q2" gate="G$1" x="109.22" y="0" smashed="yes">
-<attribute name="NAME" x="114.3" y="2.54" size="1.778" layer="95"/>
-<attribute name="VALUE" x="114.3" y="0" size="1.778" layer="96"/>
-</instance>
 <instance part="IC1" gate="1" x="45.72" y="99.06" smashed="yes">
 <attribute name="NAME" x="48.26" y="91.44" size="1.778" layer="95"/>
 <attribute name="VALUE" x="48.26" y="88.9" size="1.778" layer="96"/>
@@ -6294,6 +6286,14 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <instance part="LOAD-IN" gate="G$1" x="147.32" y="71.12" smashed="yes">
 <attribute name="NAME" x="140.97" y="76.835" size="1.778" layer="95"/>
 <attribute name="VALUE" x="140.97" y="66.04" size="1.778" layer="96"/>
+</instance>
+<instance part="Q1" gate="G$1" x="55.88" y="0" smashed="yes">
+<attribute name="NAME" x="60.96" y="2.54" size="1.778" layer="95"/>
+<attribute name="VALUE" x="60.96" y="0" size="1.778" layer="96"/>
+</instance>
+<instance part="Q2" gate="G$1" x="109.22" y="0" smashed="yes">
+<attribute name="NAME" x="114.3" y="2.54" size="1.778" layer="95"/>
+<attribute name="VALUE" x="114.3" y="0" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
