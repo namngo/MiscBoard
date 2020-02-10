@@ -17305,12 +17305,8 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <wire x1="2.54" y1="76.2" x2="7.62" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="PAD"/>
 <wire x1="7.62" y1="76.2" x2="10.16" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="10.16" y1="76.2" x2="12.7" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="12.7" y1="76.2" x2="17.78" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="76.2" x2="17.78" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="76.2" x2="17.78" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="NC"/>
-<wire x1="12.7" y1="86.36" x2="12.7" y2="76.2" width="0.1524" layer="91"/>
-<junction x="12.7" y="76.2"/>
 <pinref part="U$1" gate="G$1" pin="AGND"/>
 <wire x1="7.62" y1="86.36" x2="7.62" y2="76.2" width="0.1524" layer="91"/>
 <junction x="7.62" y="76.2"/>
@@ -17324,13 +17320,9 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <wire x1="7.62" y1="22.86" x2="7.62" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="PAD"/>
 <wire x1="7.62" y1="22.86" x2="10.16" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="10.16" y1="22.86" x2="12.7" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="12.7" y1="22.86" x2="17.78" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="22.86" x2="17.78" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="22.86" x2="17.78" y2="33.02" width="0.1524" layer="91"/>
 <junction x="7.62" y="22.86"/>
-<pinref part="U$2" gate="G$1" pin="NC"/>
-<wire x1="12.7" y1="33.02" x2="12.7" y2="22.86" width="0.1524" layer="91"/>
-<junction x="12.7" y="22.86"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 <junction x="10.16" y="22.86"/>
 </segment>
@@ -17436,6 +17428,15 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <pinref part="DIM-1" gate="G$1" pin="1"/>
 <pinref part="U$1" gate="G$1" pin="DIM"/>
 <wire x1="-20.32" y1="86.36" x2="-2.54" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="-20.32" y1="86.36" x2="-33.02" y2="86.36" width="0.1524" layer="91"/>
+<junction x="-20.32" y="86.36"/>
+<pinref part="DIM-2" gate="G$1" pin="1"/>
+<pinref part="U$2" gate="G$1" pin="DIM"/>
+<wire x1="-17.78" y1="27.94" x2="-2.54" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="27.94" x2="-2.54" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="-33.02" y1="86.36" x2="-33.02" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="-33.02" y1="27.94" x2="-17.78" y2="27.94" width="0.1524" layer="91"/>
+<junction x="-17.78" y="27.94"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -17450,14 +17451,6 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <pinref part="U$2" gate="G$1" pin="SW"/>
 <pinref part="L2" gate="G$1" pin="1"/>
 <wire x1="30.48" y1="58.42" x2="25.4" y2="58.42" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="DIM-2" gate="G$1" pin="1"/>
-<pinref part="U$2" gate="G$1" pin="DIM"/>
-<wire x1="-17.78" y1="27.94" x2="-2.54" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="-2.54" y1="27.94" x2="-2.54" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
