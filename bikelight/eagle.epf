@@ -18,9 +18,9 @@ UsedLibraryUrn="urn:adsk.eagle:library:399"
 UsedLibraryUrn="urn:adsk.eagle:library:400"
 UsedLibraryUrn="urn:adsk.eagle:library:401"
 UsedLibraryUrn="urn:adsk.eagle:library:402"
+UsedLibraryUrn="urn:adsk.eagle:library:14283568"
 UsedLibraryUrn="urn:adsk.eagle:library:86"
 UsedLibraryUrn="urn:adsk.eagle:library:87"
-UsedLibraryUrn="urn:adsk.eagle:library:14283568"
 UsedLibraryUrn="urn:adsk.eagle:library:348"
 UsedLibraryUrn="urn:adsk.eagle:library:108"
 UsedLibraryUrn="urn:adsk.eagle:library:420"
@@ -30,5 +30,5 @@ Type="Control Panel"
 Number=0
 
 [Desktop]
-Screen="7680 2160"
+Screen="5760 1080"
 Window="Win_1"
