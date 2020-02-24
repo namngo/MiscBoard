@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -10990,6 +10990,10 @@ Feel free to contact us at &lt;a href="mailto:Support@PCBLayout.com"&gt;Support@
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="470"/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="JUMPER" library="Resistor_Capacitor" library_urn="urn:adsk.eagle:library:15122775" deviceset="RC0603JR-070RL" device="" package3d_urn="urn:adsk.eagle:package:10872900/3"/>
+<part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uf"/>
+<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k"/>
+<part name="+3V3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11046,6 +11050,20 @@ Feel free to contact us at &lt;a href="mailto:Support@PCBLayout.com"&gt;Support@
 <instance part="JUMPER" gate="G$1" x="106.68" y="33.02" smashed="yes">
 <attribute name="NAME" x="101.6" y="29.4386" size="1.778" layer="95"/>
 </instance>
+<instance part="C3" gate="G$1" x="0" y="58.42" smashed="yes">
+<attribute name="NAME" x="1.016" y="59.055" size="1.778" layer="95"/>
+<attribute name="VALUE" x="1.016" y="54.229" size="1.778" layer="96"/>
+</instance>
+<instance part="R2" gate="G$1" x="0" y="69.85" smashed="yes" rot="R90">
+<attribute name="NAME" x="-1.4986" y="66.04" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="3.302" y="66.04" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="+3V3" gate="G$1" x="0" y="78.74" smashed="yes">
+<attribute name="VALUE" x="-2.54" y="73.66" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND4" gate="1" x="0" y="49.53" smashed="yes">
+<attribute name="VALUE" x="-2.54" y="46.99" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -11081,6 +11099,11 @@ Feel free to contact us at &lt;a href="mailto:Support@PCBLayout.com"&gt;Support@
 <pinref part="GND3" gate="1" pin="GND"/>
 <pinref part="LED1" gate="G$1" pin="C"/>
 <wire x1="119.38" y1="16.51" x2="119.38" y2="19.05" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C3" gate="G$1" pin="2"/>
+<pinref part="GND4" gate="1" pin="GND"/>
+<wire x1="0" y1="53.34" x2="0" y2="52.07" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IO2" class="0">
@@ -11153,6 +11176,15 @@ Feel free to contact us at &lt;a href="mailto:Support@PCBLayout.com"&gt;Support@
 <wire x1="43.18" y1="62.23" x2="22.86" y2="62.23" width="0.1524" layer="91"/>
 <pinref part="LEFTPIN" gate="A" pin="3"/>
 <wire x1="22.86" y1="62.23" x2="22.86" y2="60.96" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="0" y1="64.77" x2="0" y2="62.23" width="0.1524" layer="91"/>
+<wire x1="0" y1="62.23" x2="0" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="0" y1="62.23" x2="6.35" y2="62.23" width="0.1524" layer="91"/>
+<junction x="0" y="62.23"/>
+<label x="2.54" y="62.23" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$13" class="0">
@@ -11389,6 +11421,11 @@ Feel free to contact us at &lt;a href="mailto:Support@PCBLayout.com"&gt;Support@
 <wire x1="1.27" y1="34.29" x2="-3.81" y2="34.29" width="0.1524" layer="91"/>
 <wire x1="1.27" y1="35.56" x2="1.27" y2="34.29" width="0.1524" layer="91"/>
 <junction x="1.27" y="34.29"/>
+</segment>
+<segment>
+<pinref part="+3V3" gate="G$1" pin="+3V3"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="0" y1="76.2" x2="0" y2="74.93" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
