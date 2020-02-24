@@ -20629,8 +20629,8 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <instance part="+3V1" gate="G$1" x="10.16" y="86.36" smashed="yes">
 <attribute name="VALUE" x="7.62" y="81.28" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="+3V2" gate="G$1" x="-1.27" y="43.18" smashed="yes">
-<attribute name="VALUE" x="-3.81" y="38.1" size="1.778" layer="96" rot="R90"/>
+<instance part="+3V2" gate="G$1" x="-1.27" y="45.72" smashed="yes">
+<attribute name="VALUE" x="-3.81" y="40.64" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="C2" gate="G$1" x="2.54" y="38.1" smashed="yes">
 <attribute name="NAME" x="3.556" y="38.735" size="1.778" layer="95"/>
@@ -21103,14 +21103,6 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <junction x="10.16" y="76.2"/>
 </segment>
 <segment>
-<pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="2.54" y1="40.64" x2="-1.27" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="+3V2" gate="G$1" pin="+3V3"/>
-<wire x1="-1.27" y1="40.64" x2="-6.35" y2="40.64" width="0.1524" layer="91"/>
-<junction x="-1.27" y="40.64"/>
-<pinref part="C2" gate="G$1" pin="1"/>
-</segment>
-<segment>
 <pinref part="+3V3" gate="G$1" pin="+3V3"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="-55.88" y1="104.14" x2="-55.88" y2="102.87" width="0.1524" layer="91"/>
@@ -21119,6 +21111,15 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <pinref part="UART" gate="A" pin="3"/>
 <wire x1="-55.88" y1="31.75" x2="-62.23" y2="31.75" width="0.1524" layer="91"/>
 <pinref part="+3V4" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="C2" gate="G$1" pin="1"/>
+<pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="2.54" y1="40.64" x2="0" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="+3V2" gate="G$1" pin="+3V3"/>
+<wire x1="-1.27" y1="40.64" x2="-6.35" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="0" y1="40.64" x2="-1.27" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="-1.27" y1="40.64" x2="-1.27" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="DTR" class="0">
