@@ -1,6 +1,6 @@
 [Eagle]
 Version="09 05 02"
-Platform="Linux"
+Platform="Windows"
 Globals="Globals"
 Desktop="Desktop"
 
@@ -18,9 +18,9 @@ UsedLibraryUrn="urn:adsk.eagle:library:399"
 UsedLibraryUrn="urn:adsk.eagle:library:400"
 UsedLibraryUrn="urn:adsk.eagle:library:401"
 UsedLibraryUrn="urn:adsk.eagle:library:402"
-UsedLibraryUrn="urn:adsk.eagle:library:14283568"
 UsedLibraryUrn="urn:adsk.eagle:library:86"
 UsedLibraryUrn="urn:adsk.eagle:library:87"
+UsedLibraryUrn="urn:adsk.eagle:library:14283568"
 UsedLibraryUrn="urn:adsk.eagle:library:348"
 UsedLibraryUrn="urn:adsk.eagle:library:108"
 UsedLibraryUrn="urn:adsk.eagle:library:420"

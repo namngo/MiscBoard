@@ -94,6 +94,8 @@
 <layer number="131" name="tAdjust" color="7" fill="1" visible="no" active="no"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="no" active="no"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="no" active="no"/>
+<layer number="145" name="DrillLegend_01-16" color="2" fill="9" visible="no" active="yes"/>
+<layer number="146" name="DrillLegend_01-20" color="3" fill="9" visible="no" active="yes"/>
 <layer number="150" name="Notes" color="7" fill="1" visible="no" active="no"/>
 <layer number="151" name="HeatSink" color="7" fill="1" visible="no" active="no"/>
 <layer number="152" name="_bDocu" color="7" fill="1" visible="no" active="no"/>
@@ -1620,6 +1622,22 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 <rectangle x1="0.3556" y1="-0.7239" x2="1.1057" y2="0.7262" layer="51"/>
 <rectangle x1="-0.1001" y1="-0.4001" x2="0.1001" y2="0.4001" layer="35"/>
 </package>
+<package name="R0805" urn="urn:adsk.eagle:footprint:23045/1" library_version="11">
+<description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;</description>
+<wire x1="-0.41" y1="0.635" x2="0.41" y2="0.635" width="0.1524" layer="51"/>
+<wire x1="-0.41" y1="-0.635" x2="0.41" y2="-0.635" width="0.1524" layer="51"/>
+<wire x1="-1.973" y1="0.983" x2="1.973" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="1.973" y1="0.983" x2="1.973" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="1.973" y1="-0.983" x2="-1.973" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="-1.973" y1="-0.983" x2="-1.973" y2="0.983" width="0.0508" layer="39"/>
+<smd name="1" x="-0.95" y="0" dx="1.3" dy="1.5" layer="1"/>
+<smd name="2" x="0.95" y="0" dx="1.3" dy="1.5" layer="1"/>
+<text x="-0.635" y="1.27" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.635" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="0.4064" y1="-0.6985" x2="1.0564" y2="0.7015" layer="51"/>
+<rectangle x1="-1.0668" y1="-0.6985" x2="-0.4168" y2="0.7015" layer="51"/>
+<rectangle x1="-0.1999" y1="-0.5001" x2="0.1999" y2="0.5001" layer="35"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="C1210" urn="urn:adsk.eagle:package:23619/2" type="model" library_version="11">
@@ -1632,6 +1650,12 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 <description>CAPACITOR</description>
 <packageinstances>
 <packageinstance name="C0805"/>
+</packageinstances>
+</package3d>
+<package3d name="R0805" urn="urn:adsk.eagle:package:23553/2" type="model" library_version="11">
+<description>RESISTOR</description>
+<packageinstances>
+<packageinstance name="R0805"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -1661,6 +1685,165 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 <description>SOT-23</description>
 <packageinstances>
 <packageinstance name="SOT23"/>
+</packageinstances>
+</package3d>
+</packages3d>
+</library>
+<library name="led" urn="urn:adsk.eagle:library:259">
+<description>&lt;b&gt;LEDs&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;&lt;br&gt;
+Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternational.com&amp;gt;&lt;/author&gt; with DUOLED</description>
+<packages>
+<package name="CHIPLED_0805" urn="urn:adsk.eagle:footprint:15674/1" library_version="5">
+<description>&lt;b&gt;CHIPLED&lt;/b&gt;&lt;p&gt;
+Source: http://www.osram.convergy.de/ ... LG_R971.pdf</description>
+<wire x1="-0.35" y1="0.925" x2="0.35" y2="0.925" width="0.1016" layer="51" curve="162.394521"/>
+<wire x1="-0.35" y1="-0.925" x2="0.35" y2="-0.925" width="0.1016" layer="51" curve="-162.394521"/>
+<wire x1="0.575" y1="0.525" x2="0.575" y2="-0.525" width="0.1016" layer="51"/>
+<wire x1="-0.575" y1="-0.5" x2="-0.575" y2="0.925" width="0.1016" layer="51"/>
+<circle x="-0.45" y="0.85" radius="0.103" width="0.1016" layer="51"/>
+<smd name="C" x="0" y="1.05" dx="1.2" dy="1.2" layer="1"/>
+<smd name="A" x="0" y="-1.05" dx="1.2" dy="1.2" layer="1"/>
+<text x="-1.27" y="-1.27" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="2.54" y="-1.27" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<rectangle x1="0.3" y1="0.5" x2="0.625" y2="1" layer="51"/>
+<rectangle x1="-0.325" y1="0.5" x2="-0.175" y2="0.75" layer="51"/>
+<rectangle x1="0.175" y1="0.5" x2="0.325" y2="0.75" layer="51"/>
+<rectangle x1="-0.2" y1="0.5" x2="0.2" y2="0.675" layer="51"/>
+<rectangle x1="0.3" y1="-1" x2="0.625" y2="-0.5" layer="51"/>
+<rectangle x1="-0.625" y1="-1" x2="-0.3" y2="-0.5" layer="51"/>
+<rectangle x1="0.175" y1="-0.75" x2="0.325" y2="-0.5" layer="51"/>
+<rectangle x1="-0.325" y1="-0.75" x2="-0.175" y2="-0.5" layer="51"/>
+<rectangle x1="-0.2" y1="-0.675" x2="0.2" y2="-0.5" layer="51"/>
+<rectangle x1="-0.1" y1="0" x2="0.1" y2="0.2" layer="21"/>
+<rectangle x1="-0.6" y1="0.5" x2="-0.3" y2="0.8" layer="51"/>
+<rectangle x1="-0.625" y1="0.925" x2="-0.3" y2="1" layer="51"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="CHIPLED_0805" urn="urn:adsk.eagle:package:15821/2" type="model" library_version="5">
+<description>CHIPLED
+Source: http://www.osram.convergy.de/ ... LG_R971.pdf</description>
+<packageinstances>
+<packageinstance name="CHIPLED_0805"/>
+</packageinstances>
+</package3d>
+</packages3d>
+</library>
+<library name="Switch" urn="urn:adsk.eagle:library:11396471">
+<description>&lt;h3&gt; PCBLayout.com - Frequently Used &lt;i&gt;Switches&lt;/i&gt;&lt;/h3&gt;
+
+Visit us at &lt;a href="http://www.PCBLayout.com"&gt;PCBLayout.com&lt;/a&gt; for quick and hassle-free PCB Layout/Manufacturing ordering experience.
+&lt;BR&gt;
+&lt;BR&gt;
+This library has been generated by our experienced pcb layout engineers using current IPC and/or industry standards. We &lt;b&gt;believe&lt;/b&gt; the content to be accurate, complete and current. But, this content is provided as a courtesy and &lt;u&gt;user assumes all risk and responsiblity of it's usage&lt;/u&gt;.
+&lt;BR&gt;
+&lt;BR&gt;
+Feel free to contact us at &lt;a href="mailto:Support@PCBLayout.com"&gt;Support@PCBLayout.com&lt;/a&gt; if you have any questions/concerns regarding any of our content or services.</description>
+<packages>
+<package name="B3U-1000P" urn="urn:adsk.eagle:footprint:10899208/1" library_version="3">
+<wire x1="-1.5" y1="-1.25" x2="-1.5" y2="1.25" width="0.127" layer="51"/>
+<wire x1="-1.5" y1="1.25" x2="1.5" y2="1.25" width="0.127" layer="51"/>
+<wire x1="1.5" y1="1.25" x2="1.5" y2="-1.25" width="0.127" layer="51"/>
+<wire x1="1.5" y1="-1.25" x2="-1.5" y2="-1.25" width="0.127" layer="51"/>
+<wire x1="-1.75" y1="-1.1" x2="-2.35" y2="-1.1" width="0.05" layer="39"/>
+<wire x1="-2.35" y1="-1.1" x2="-2.35" y2="1.1" width="0.05" layer="39"/>
+<wire x1="-2.35" y1="1.1" x2="-1.75" y2="1.1" width="0.05" layer="39"/>
+<wire x1="1.75" y1="1.1" x2="2.35" y2="1.1" width="0.05" layer="39"/>
+<wire x1="2.35" y1="1.1" x2="2.35" y2="-1.1" width="0.05" layer="39"/>
+<wire x1="2.35" y1="-1.1" x2="1.75" y2="-1.1" width="0.05" layer="39"/>
+<wire x1="1.75" y1="-1.1" x2="1.75" y2="-1.5" width="0.05" layer="39"/>
+<wire x1="1.75" y1="-1.5" x2="-1.75" y2="-1.5" width="0.05" layer="39"/>
+<wire x1="-1.75" y1="-1.5" x2="-1.75" y2="-1.1" width="0.05" layer="39"/>
+<wire x1="-1.75" y1="1.1" x2="-1.75" y2="1.5" width="0.05" layer="39"/>
+<wire x1="-1.75" y1="1.5" x2="1.75" y2="1.5" width="0.05" layer="39"/>
+<wire x1="1.75" y1="1.5" x2="1.75" y2="1.1" width="0.05" layer="39"/>
+<wire x1="-1.5" y1="1" x2="-1.5" y2="1.25" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="1.25" x2="1.5" y2="1.25" width="0.127" layer="21"/>
+<wire x1="1.5" y1="1.25" x2="1.5" y2="1" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="-0.95" x2="-1.5" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="-1.25" x2="1.5" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="1.5" y1="-1.25" x2="1.5" y2="-1" width="0.127" layer="21"/>
+<text x="-2.7" y="1.7" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.7" y="-2.9" size="1.27" layer="27">&gt;VALUE</text>
+<smd name="1" x="-1.7" y="0" dx="1.7" dy="0.8" layer="1" rot="R90"/>
+<smd name="2" x="1.7" y="0" dx="1.7" dy="0.8" layer="1" rot="R90"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="B3U-1000P" urn="urn:adsk.eagle:package:10899220/2" type="model" library_version="3">
+<packageinstances>
+<packageinstance name="B3U-1000P"/>
+</packageinstances>
+</package3d>
+</packages3d>
+</library>
+<library name="SparkFun-LED" urn="urn:adsk.eagle:library:529">
+<description>&lt;h3&gt;SparkFun LEDs&lt;/h3&gt;
+This library contains discrete LEDs for illumination or indication, but no displays.
+&lt;br&gt;
+&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
+&lt;br&gt;
+&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;
+&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+<package name="WS2812B" urn="urn:adsk.eagle:footprint:39331/1" library_version="1">
+<description>&lt;h3&gt;WS2812B&lt;/h3&gt;
+
+&lt;p&gt;Specifications:
+&lt;ul&gt;&lt;li&gt;Pin count: 4&lt;/li&gt;
+&lt;li&gt;Size: 5.0 x 5.0 mm&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Datasheet referenced for footprint:&lt;/b&gt; &lt;a href="http://cdn.sparkfun.com/datasheets/BreakoutBoards/WS2812B.pdf"&gt;WS2812B&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Example device:
+&lt;ul&gt;&lt;li&gt;WS2812B&lt;/li&gt;</description>
+<smd name="1" x="2.577" y="-1.6" dx="1.651" dy="1" layer="1" rot="R180"/>
+<smd name="4" x="-2.577" y="-1.6" dx="1.651" dy="1" layer="1" rot="R180"/>
+<smd name="3" x="-2.577" y="1.6" dx="1.651" dy="1" layer="1" rot="R180"/>
+<smd name="2" x="2.577" y="1.6" dx="1.651" dy="1" layer="1" rot="R180"/>
+<wire x1="2.5" y1="-2.5" x2="2.5" y2="2.5" width="0.127" layer="51"/>
+<wire x1="2.5" y1="2.5" x2="-2.5" y2="2.5" width="0.127" layer="51"/>
+<wire x1="-2.5" y1="2.5" x2="-2.5" y2="-2.5" width="0.127" layer="51"/>
+<wire x1="-2.5" y1="-2.5" x2="2.5" y2="-2.5" width="0.127" layer="51"/>
+<wire x1="2.4892" y1="-2.362203125" x2="2.4892" y2="-2.616203125" width="0.2032" layer="21"/>
+<wire x1="2.4892" y1="-2.616203125" x2="2.4384" y2="-2.616203125" width="0.2032" layer="21"/>
+<wire x1="2.4384" y1="-2.616203125" x2="2.4384" y2="-2.611121875" width="0.2032" layer="21"/>
+<wire x1="2.4384" y1="-2.611121875" x2="-2.512059375" y2="-2.611121875" width="0.2032" layer="21"/>
+<wire x1="-2.512059375" y1="-2.611121875" x2="-2.512059375" y2="-2.37998125" width="0.2032" layer="21"/>
+<wire x1="2.50951875" y1="2.319021875" x2="2.50951875" y2="2.5908" width="0.2032" layer="21"/>
+<wire x1="2.50951875" y1="2.5908" x2="2.45871875" y2="2.5908" width="0.2032" layer="21"/>
+<wire x1="2.45871875" y1="2.5908" x2="2.45871875" y2="2.593340625" width="0.2032" layer="21"/>
+<wire x1="2.45871875" y1="2.593340625" x2="-2.50951875" y2="2.593340625" width="0.2032" layer="21"/>
+<wire x1="-2.50951875" y1="2.593340625" x2="-2.50951875" y2="2.36728125" width="0.2032" layer="21"/>
+<wire x1="2.54" y1="0.889" x2="2.54" y2="-0.8128" width="0.2032" layer="21"/>
+<wire x1="-2.54" y1="-0.8636" x2="-2.54" y2="0" width="0.2032" layer="21"/>
+<wire x1="-2.54" y1="0" x2="-2.54" y2="0.8636" width="0.2032" layer="21"/>
+<wire x1="-2.54" y1="0" x2="0" y2="2.54" width="0.2032" layer="21"/>
+<text x="0" y="2.794" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-2.794" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<circle x="-2.8575" y="2.8575" radius="0.2032" width="0" layer="21"/>
+<circle x="-1.27" y="1.905" radius="0.2032" width="0" layer="51"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="WS2812B" urn="urn:adsk.eagle:package:39369/1" type="box" library_version="1">
+<description>WS2812B
+
+Specifications:
+Pin count: 4
+Size: 5.0 x 5.0 mm
+
+Datasheet referenced for footprint: WS2812B
+Example device:
+WS2812B</description>
+<packageinstances>
+<packageinstance name="WS2812B"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -1914,12 +2097,46 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="C" x="2.54" y="-33.02" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="0.635" y="-36.195" size="1.27" layer="27"/>
 </element>
+<element name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C1210" package3d_urn="urn:adsk.eagle:package:23619/2" value="1uf" x="2.54" y="-40.64" smashed="yes">
+<attribute name="NAME" x="0.635" y="-38.735" size="1.27" layer="25"/>
+<attribute name="POPULARITY" value="6" x="2.54" y="-40.64" size="1.778" layer="27" display="off"/>
+<attribute name="SPICEPREFIX" value="C" x="2.54" y="-40.64" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="0.635" y="-43.815" size="1.27" layer="27"/>
+</element>
+<element name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" package="CHIPLED_0805" package3d_urn="urn:adsk.eagle:package:15821/2" value="" x="-3.175" y="-42.545" smashed="yes">
+<attribute name="NAME" x="-4.445" y="-43.815" size="1.27" layer="25" rot="R90"/>
+<attribute name="POPULARITY" value="52" x="-3.175" y="-42.545" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="-0.635" y="-43.815" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="1.5k" x="-4.1275" y="-47.625" smashed="yes">
+<attribute name="NAME" x="-4.7625" y="-46.355" size="1.27" layer="25"/>
+<attribute name="POPULARITY" value="85" x="-4.1275" y="-47.625" size="1.778" layer="27" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="-4.1275" y="-47.625" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="-4.7625" y="-50.165" size="1.27" layer="27"/>
+</element>
+<element name="RESET" library="Switch" library_urn="urn:adsk.eagle:library:11396471" package="B3U-1000P" package3d_urn="urn:adsk.eagle:package:10899220/2" value="B3U-1000P" x="-15.24" y="-54.2925" smashed="yes">
+<attribute name="CREATED_BY" value="PCBLayout.com" x="-15.24" y="-54.2925" size="1.778" layer="27" display="off"/>
+<attribute name="DIGI_KEY_PART_NUMBER" value="SW1020CT-ND" x="-15.24" y="-54.2925" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER" value="Omron Electronics Inc-EMC Div" x="-15.24" y="-54.2925" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="B3U-1000P" x="-15.24" y="-54.2925" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="-17.94" y="-52.5925" size="1.27" layer="25"/>
+<attribute name="PACKAGE" value="SPST-NO" x="-15.24" y="-54.2925" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="-17.94" y="-57.1925" size="1.27" layer="27"/>
+</element>
+<element name="D1" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" package="WS2812B" package3d_urn="urn:adsk.eagle:package:39369/1" value="WS2812B" x="-22.225" y="-53.975" smashed="yes">
+<attribute name="NAME" x="-22.225" y="-51.181" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
+<attribute name="PROD_ID" value="DIO-12503" x="-22.225" y="-53.975" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="-22.225" y="-56.769" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+</element>
+<element name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value=".1uf" x="-23.495" y="-60.96" smashed="yes">
+<attribute name="NAME" x="-24.765" y="-59.69" size="1.27" layer="25"/>
+<attribute name="POPULARITY" value="63" x="-23.495" y="-60.96" size="1.778" layer="27" display="off"/>
+<attribute name="SPICEPREFIX" value="C" x="-23.495" y="-60.96" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="-24.765" y="-63.5" size="1.27" layer="27"/>
+</element>
 </elements>
 <signals>
 <signal name="GND">
-<contactref element="IC1" pad="10"/>
-<contactref element="IC1" pad="33"/>
-<contactref element="U$1" pad="2"/>
 <contactref element="USB" pad="5"/>
 <contactref element="U$3" pad="3"/>
 <contactref element="C3" pad="2"/>
@@ -1927,7 +2144,15 @@ design rules under a new name.</description>
 <contactref element="AP2127" pad="1"/>
 <contactref element="U$2" pad="9"/>
 <contactref element="C4" pad="2"/>
-<wire x1="28.575" y1="59.3725" x2="53.0225" y2="52.705" width="0" layer="19" extent="1-1"/>
+<contactref element="C2" pad="2"/>
+<contactref element="LED1" pad="C"/>
+<contactref element="IC1" pad="28"/>
+<contactref element="IC1" pad="33"/>
+<contactref element="IC1" pad="10"/>
+<contactref element="RESET" pad="1"/>
+<contactref element="D1" pad="3"/>
+<contactref element="C5" pad="1"/>
+<wire x1="28.575" y1="59.3725" x2="28.825" y2="61.8725" width="0" layer="19" extent="1-1"/>
 <wire x1="27.325" y1="56.8725" x2="28.575" y2="59.3725" width="0" layer="19" extent="1-1"/>
 <wire x1="4.7625" y1="51.1175" x2="27.325" y2="56.8725" width="0" layer="19" extent="1-1"/>
 <wire x1="5.715" y1="26.3525" x2="4.7625" y2="51.1175" width="0" layer="19" extent="1-1"/>
@@ -1936,21 +2161,13 @@ design rules under a new name.</description>
 <wire x1="3.1725" y1="-20.32" x2="3.94" y2="-11.43" width="0" layer="19" extent="1-1"/>
 <wire x1="1.59" y1="-28.405" x2="3.1725" y2="-20.32" width="0" layer="19" extent="1-1"/>
 <wire x1="3.94" y1="-33.02" x2="1.59" y2="-28.405" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="VDDA">
-<contactref element="IC1" pad="9"/>
-</signal>
-<signal name="VDDIN">
-<contactref element="IC1" pad="30"/>
-</signal>
-<signal name="GNDA">
-<contactref element="IC1" pad="28"/>
-</signal>
-<signal name="VDDCORE">
-<contactref element="IC1" pad="29"/>
+<wire x1="3.94" y1="-40.64" x2="3.94" y2="-33.02" width="0" layer="19" extent="1-1"/>
+<wire x1="-3.175" y1="-41.495" x2="3.94" y2="-40.64" width="0" layer="19" extent="1-1"/>
+<wire x1="-16.94" y1="-54.2925" x2="-3.175" y2="-41.495" width="0" layer="19" extent="1-1"/>
+<wire x1="-24.802" y1="-52.375" x2="-16.94" y2="-54.2925" width="0" layer="19" extent="1-1"/>
+<wire x1="-24.445" y1="-60.96" x2="-24.802" y2="-52.375" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VIN">
-<contactref element="U$1" pad="1"/>
 </signal>
 <signal name="D-">
 <contactref element="IC1" pad="23"/>
@@ -1972,8 +2189,16 @@ design rules under a new name.</description>
 <contactref element="U$3" pad="4"/>
 <contactref element="C1" pad="1"/>
 <contactref element="AP2127" pad="3"/>
+<contactref element="IC1" pad="30"/>
+<contactref element="IC1" pad="9"/>
+<contactref element="D1" pad="1"/>
+<contactref element="C5" pad="2"/>
+<wire x1="26.825" y1="56.8725" x2="27.825" y2="61.8725" width="0" layer="19" extent="1-1"/>
+<wire x1="24.4475" y1="29.5275" x2="26.825" y2="56.8725" width="0" layer="19" extent="1-1"/>
 <wire x1="1.14" y1="-11.43" x2="24.4475" y2="29.5275" width="0" layer="19" extent="1-1"/>
 <wire x1="2.54" y1="-26.205" x2="1.14" y2="-11.43" width="0" layer="19" extent="1-1"/>
+<wire x1="-19.648" y1="-55.575" x2="2.54" y2="-26.205" width="0" layer="19" extent="1-1"/>
+<wire x1="-22.545" y1="-60.96" x2="-19.648" y2="-55.575" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+1.8V">
 <contactref element="C3" pad="1"/>
@@ -1983,6 +2208,49 @@ design rules under a new name.</description>
 <wire x1="1.2725" y1="-20.32" x2="5.715" y2="28.8925" width="0" layer="19" extent="1-1"/>
 <wire x1="3.49" y1="-28.405" x2="1.2725" y2="-20.32" width="0" layer="19" extent="1-1"/>
 <wire x1="1.14" y1="-33.02" x2="3.49" y2="-28.405" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$1">
+<contactref element="IC1" pad="29"/>
+<contactref element="C2" pad="1"/>
+<wire x1="1.14" y1="-40.64" x2="28.325" y2="61.8725" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$2">
+<contactref element="IC1" pad="13"/>
+<contactref element="R3" pad="1"/>
+<wire x1="-5.0775" y1="-47.625" x2="28.825" y2="56.8725" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$3">
+<contactref element="R3" pad="2"/>
+<contactref element="LED1" pad="A"/>
+<wire x1="-3.175" y1="-43.595" x2="-3.1775" y2="-47.625" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="RESET">
+<contactref element="IC1" pad="26"/>
+<contactref element="RESET" pad="2"/>
+<wire x1="-13.54" y1="-54.2925" x2="29.825" y2="61.8725" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$5">
+<contactref element="IC1" pad="1"/>
+<contactref element="D1" pad="4"/>
+<wire x1="-24.802" y1="-55.575" x2="26.075" y2="61.1225" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$4">
+<contactref element="IC1" pad="7"/>
+</signal>
+<signal name="N$6">
+<contactref element="IC1" pad="8"/>
+</signal>
+<signal name="N$7">
+<contactref element="IC1" pad="11"/>
+</signal>
+<signal name="N$8">
+<contactref element="IC1" pad="12"/>
+</signal>
+<signal name="N$9">
+<contactref element="IC1" pad="31"/>
+</signal>
+<signal name="N$10">
+<contactref element="IC1" pad="32"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
