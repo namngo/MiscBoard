@@ -1,5 +1,5 @@
 board/carlightboard/BoardOutput/
-**/BoardOutput/
+**/BoardOutput/*
 output/
 *.zip
 *.b#*
