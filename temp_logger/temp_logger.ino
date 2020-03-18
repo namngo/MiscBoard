@@ -79,15 +79,10 @@ void setupSecret()
   // uncomment to setup secrets
   // do not check in secrets!
 
-  esp_setting.SetKey(esp_setting.UserNameKey, "namngo");
-  esp_setting.SetKey(esp_setting.ServiceKey, "aio_yuwK42hM1zBZ3DJpkwCCBHHkYhSV");
-  esp_setting.SetKey(esp_setting.WifiSSIDKey, "DeceptionPass");
-  //esp_setting.SetKey(esp_setting.WifiPassKey, "iotdevices");
-
-  // preferences.putString("IO_USERNAME", "");
-  // preferences.putString("IO_KEY", "");
-
-  // preferences.putString("WIFI_PASS", "");
+  // esp_setting.SetKey(esp_setting.UserNameKey, "");
+  // esp_setting.SetKey(esp_setting.ServiceKey, "");
+  // esp_setting.SetKey(esp_setting.WifiSSIDKey, "");
+  // esp_setting.SetKey(esp_setting.WifiPassKey, "");
 }
 
 void setup()
@@ -112,6 +107,7 @@ void setup()
   while (io->status() < AIO_CONNECTED)
   {
     Serial.print(".");
+    Serial.println(io->statusText());
     delay(500);
   }
 
