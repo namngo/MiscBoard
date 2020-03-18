@@ -79,10 +79,10 @@ void setupSecret()
   // uncomment to setup secrets
   // do not check in secrets!
 
-  esp_setting.SetKey(esp_setting.UserNameKey, "");
-  esp_setting.SetKey(esp_setting.ServiceKey, "");
-  esp_setting.SetKey(esp_setting.WifiPassKey, "");
-  esp_setting.SetKey(esp_setting.WifiPassKey, "");
+  esp_setting.SetKey(esp_setting.UserNameKey, "namngo");
+  esp_setting.SetKey(esp_setting.ServiceKey, "aio_yuwK42hM1zBZ3DJpkwCCBHHkYhSV");
+  esp_setting.SetKey(esp_setting.WifiSSIDKey, "DeceptionPass");
+  //esp_setting.SetKey(esp_setting.WifiPassKey, "iotdevices");
 
   // preferences.putString("IO_USERNAME", "");
   // preferences.putString("IO_KEY", "");
@@ -97,20 +97,17 @@ void setup()
 
   setupSecret();
 
-  auto username = preferences.getString("IO_USERNAME").c_str();
-  auto key = preferences.getString("IO_KEY").c_str();
-  auto wifi_ssid = preferences.getString("WIFI_SSID").c_str();
-  auto wifi_pass = preferences.getString("WIFI_PASS").c_str();
-  Serial.println(username);
-  Serial.println(key);
-  Serial.println(wifi_ssid);
-  Serial.println(wifi_pass);
+  auto username = esp_setting.GetKey(esp_setting.UserNameKey);
+  auto key = esp_setting.GetKey(esp_setting.ServiceKey);
+  auto wifi_ssid = esp_setting.GetKey(esp_setting.WifiSSIDKey);
+  auto wifi_pass = esp_setting.GetKey(esp_setting.WifiPassKey);
 
-  //AdafruitIO_WiFi io1(username, key, wifi_ssid, wifi_pass);
-  io = std::make_unique<AdafruitIO_WiFi>(username, key, wifi_ssid, wifi_pass);
-  temp_c_feed = io->feed("temp_c");
-  temp_f_feed = io->feed("temp_c");
-  humidity_feed = io->feed("temp_c");
+  io = std::make_unique<AdafruitIO_WiFi>(username.c_str(), key.c_str(), wifi_ssid.c_str(), wifi_pass.c_str());
+  temp_c_feed = io->feed("Temperature C");
+  temp_f_feed = io->feed("Temperature F");
+  humidity_feed = io->feed("Humidity");
+
+  io->connect();
 
   while (io->status() < AIO_CONNECTED)
   {
@@ -118,12 +115,31 @@ void setup()
     delay(500);
   }
 
-  Serial.println();
   Serial.println(io->statusText());
 }
 
 void loop()
 {
+  io->run();
+
   Serial.println(readTemperature());
+  auto c_temp = readTemperature(false);
+  if (c_temp > 0)
+  {
+    temp_c_feed->save(c_temp);
+  }
+
+  auto f_temp = readTemperature(true);
+  if (f_temp > 0)
+  {
+    temp_f_feed->save(f_temp);
+  }
+
+  auto humidity = readHumidity();
+  if (humidity > 0)
+  {
+    humidity_feed->save(humidity);
+  }
+
   delay(10000);
 }

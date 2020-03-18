@@ -4,7 +4,7 @@
 #include <Preferences.h>
 #include "Arduino.h"
 
-#define CAR_SETTING_APP_NAME "temp_logger"
+#define SETTING_APP_NAME "temp_logger"
 
 namespace TempLogger
 {
@@ -12,10 +12,10 @@ namespace TempLogger
 class EspSetting
 {
 public:
-  static const String UserNameKey("IO_USERNAME");
-  static const String ServiceKey = "IO_KEY";
-  static const String WifiSSIDKey = "WIFI_SSID";
-  static const String WifiPassKey = "WIFI_PASS";
+  const String UserNameKey = "IO_USERNAME";
+  const String ServiceKey = "IO_KEY";
+  const String WifiSSIDKey = "WIFI_SSID";
+  const String WifiPassKey = "WIFI_PASS";
 
   static EspSetting &get()
   {
@@ -29,7 +29,7 @@ public:
   String GetKey(const String &key, String defaultValue = String())
   {
     Preferences p_;
-    p_.begin(CAR_SETTING_APP_NAME, true);
+    p_.begin(SETTING_APP_NAME, true);
     const auto ret = p_.getString(key.c_str());
     p_.end();
     return ret;
@@ -38,7 +38,7 @@ public:
   void SetKey(const String &key, const String &value)
   {
     Preferences p_;
-    p_.begin(CAR_SETTING_APP_NAME, false);
+    p_.begin(SETTING_APP_NAME, false);
     const auto ret = p_.putString(key.c_str(), value);
     p_.end();
   }
