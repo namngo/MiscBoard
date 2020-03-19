@@ -3,6 +3,8 @@
         {
             "name": "Win32",
             "includePath": [
+                "C:\\Users\\nam\\Documents\\Arduino\\libraries\\Adafruit_BME280_Library",
+                "C:\\Users\\nam\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
                 "C:\\Users\\nam\\Documents\\Arduino\\libraries\\ssd1306\\src",
                 "C:\\Users\\nam\\Documents\\Arduino\\libraries\\Adafruit_GFX_Library",
                 "C:\\Users\\nam\\Documents\\Arduino\\libraries\\Adafruit_SSD1306",
