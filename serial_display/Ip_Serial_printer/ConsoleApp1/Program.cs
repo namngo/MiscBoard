@@ -38,7 +38,6 @@ namespace ConsoleApp1
                     }
                 }
                 var ip = GetIpAddress();
-                Console.WriteLine(ip);
                 _serialPort.WriteLine(ip);
                 Thread.Sleep(5000);
             }

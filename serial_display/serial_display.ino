@@ -50,8 +50,6 @@ void displayInfo(std::string text, float temp, float hum, float pressure,
   if (text != "") {
     ss << text << std::endl;
   }
-  Serial.println(ss.str().c_str());
-
   display.print(ss.str().c_str());
   display.display();
 }
@@ -103,6 +101,7 @@ void loop() {
   while (Serial.available()) {
     str = Serial.readString();
   }
+  str.trim();
   if (str == "" && last_ip != "") {
     str = last_ip;
   } else if (str != "") {
