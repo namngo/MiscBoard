@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "C:\\Users\\nam\\Documents\\Arduino\\libraries\\Adafruit_BME280_Library",
+                "C:\\Users\\nam\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
+                "C:\\Users\\nam\\Documents\\Arduino\\libraries\\ssd1306\\src",
+                "C:\\Users\\nam\\Documents\\Arduino\\libraries\\Adafruit_GFX_Library",
+                "C:\\Users\\nam\\Documents\\Arduino\\libraries\\Adafruit_SSD1306",
+                "C:\\Users\\nam\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\**",
+                "C:\\Users\\nam\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\**"
+            ],
+            "defines": [
+                "ARDUINO_ARCH_ESP32",
+                "ESP32",
+                "ARDUINO=10805"
+            ],
+            "forcedInclude": [],
+            "intelliSenseMode": "msvc-x64",
+            "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}
