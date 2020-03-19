@@ -30,7 +30,9 @@ Adafruit_BME280 bme;
 
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RST);
 
-void displayInfo(String text, float temp, float hum, float pressure,
+String last_ip;
+
+void displayInfo(std::string text, float temp, float hum, float pressure,
                  float altitude) {
   display.clearDisplay();
   display.setTextColor(WHITE, BLACK);
@@ -41,17 +43,27 @@ void displayInfo(String text, float temp, float hum, float pressure,
   ss.precision(1);
   ss << std::fixed << "T= " << temp << "c  |  " << ((temp * 9 / 5) + 32) << "f"
      << std::endl;
-  ss << "H=" << hum << "%. "
+  ss << "H=" << hum << "% "
      << "Alt=" << altitude << "m" << std::endl
-     << "P=" << pressure << "hPa. " << std::endl;
+     << "P=" << pressure << "hPa" << std::endl;
+
   if (text != "") {
-    ss << text;
+    ss << text << std::endl;
   }
+  Serial.println(ss.str().c_str());
 
   display.print(ss.str().c_str());
-
-  display.print(text);
   display.display();
+}
+
+std::string getJson(float temp, float hum, float pressure, float altitude,
+                    std::string text) {
+  std::stringstream ss;
+  ss.precision(1);
+  ss << std::fixed << "{\"temp:\":\"" << temp << "\", \"humidity\":\"" << hum
+     << "\", \"pressure\":\"" << pressure << "\", \"altitude\":\"" << altitude
+     << "\", \"ip\":\"" << text << "\"}";
+  return ss.str();
 }
 
 void setup() {
@@ -66,10 +78,11 @@ void setup() {
     for (;;)
       ;  // Don't proceed, loop forever
   }
-  Wire1.begin(BME_SDA, BME_SCL);
+  display.clearDisplay();
+  display.setRotation(2);
 
-  auto status = bme.begin(BME280_ADDR, &Wire1);
-  if (!status) {
+  Wire1.begin(BME_SDA, BME_SCL);
+  if (!bme.begin(BME280_ADDR, &Wire1)) {
     Serial.println(
         "Could not find a valid BME280 sensor, check wiring, address, sensor "
         "ID!");
@@ -83,7 +96,6 @@ void setup() {
     Serial.print("        ID of 0x61 represents a BME 680.\n");
     while (1) delay(10);
   }
-  display.clearDisplay();
 }
 
 void loop() {
@@ -91,8 +103,23 @@ void loop() {
   while (Serial.available()) {
     str = Serial.readString();
   }
-  displayInfo(str, bme.readTemperature(), bme.readHumidity(),
-              bme.readPressure(), bme.readAltitude(SEALEVELPRESSURE_HPA));
+  if (str == "" && last_ip != "") {
+    str = last_ip;
+  } else if (str != "") {
+    last_ip = str;
+  }
+
+  std::string ip(str.c_str());
+
+  auto temp = bme.readTemperature();
+  auto hum = bme.readHumidity();
+  auto pressure = bme.readPressure();
+  auto altitude = bme.readAltitude(SEALEVELPRESSURE_HPA);
+
+  displayInfo(ip, temp, hum, pressure, altitude);
+
+  auto json = getJson(temp, hum, pressure, altitude, ip);
+  Serial.println(json.c_str());
 
   delay(5000);
 }
