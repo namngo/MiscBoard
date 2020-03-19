@@ -37,8 +37,8 @@ namespace ConsoleApp1
                         _continue = false;
                     }
                 }
-                var ip = GetIpAddress();
-                _serialPort.WriteLine(ip);
+                //var ip = GetIpAddress();
+                //_serialPort.WriteLine(ip);
                 Thread.Sleep(5000);
             }
             _serialPort.Close();
@@ -46,8 +46,20 @@ namespace ConsoleApp1
 
         private static void _serialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            var message = _serialPort.ReadLine();
-            Console.WriteLine(message);
+            try
+            {
+                var message = _serialPort.ReadLine().Trim();
+                if (message.Equals("request_ip", StringComparison.OrdinalIgnoreCase))
+                {
+                    var ip = GetIpAddress();
+                    _serialPort.WriteLine(ip);
+                }
+                Console.WriteLine(message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
         public static string GetIpAddress()

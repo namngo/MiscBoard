@@ -11,6 +11,11 @@
 #include <sstream>
 #include <string>
 
+#define uS_TO_S_FACTOR \
+  1000000                // Conversion factor for micro seconds to
+                         // seconds
+#define TIME_TO_SLEEP 5  // Time ESP32 will go to sleep (in seconds)
+
 // #define OLED_ADDR 0x3D  // Address 0x3D for 128x64
 #define OLED_ADDR 0x3C  // Address 0x3D for 128x32
 
@@ -64,13 +69,48 @@ std::string getJson(float temp, float hum, float pressure, float altitude,
   return ss.str();
 }
 
+std::string requestIp() {
+  Serial.println("request_ip");
+  int count = 0;
+  while (!Serial.available()) {
+    count++;
+    if (count == 20) {
+      return "";
+    }
+    delay(500);
+  }
+  String str = last_ip;
+  while (Serial.available()) {
+    str = Serial.readString();
+  }
+  str.trim();
+  if (str != "") {
+    last_ip = str;
+  }
+  std::string ip(str.c_str());
+  return ip;
+}
+
+void doWork() {
+  auto ip = requestIp();
+  auto temp = bme.readTemperature();
+  auto hum = bme.readHumidity();
+  auto pressure = bme.readPressure();
+  auto altitude = bme.readAltitude(SEALEVELPRESSURE_HPA);
+
+  displayInfo(ip, temp, hum, pressure, altitude);
+
+  auto json = getJson(temp, hum, pressure, altitude, ip);
+  Serial.println(json.c_str());
+}
+
 void setup() {
   Serial.begin(115200);
   delay(1000);
   Serial.println("init");
 
   Wire.begin(OLED_SDA, OLED_SCL);
-
+  // display.begin()
   if (!display.begin(SSD1306_SWITCHCAPVCC, OLED_ADDR)) {
     Serial.println(F("SSD1306 allocation failed"));
     for (;;)
@@ -94,31 +134,12 @@ void setup() {
     Serial.print("        ID of 0x61 represents a BME 680.\n");
     while (1) delay(10);
   }
+  esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
 }
 
 void loop() {
-  String str = "";
-  while (Serial.available()) {
-    str = Serial.readString();
-  }
-  str.trim();
-  if (str == "" && last_ip != "") {
-    str = last_ip;
-  } else if (str != "") {
-    last_ip = str;
-  }
-
-  std::string ip(str.c_str());
-
-  auto temp = bme.readTemperature();
-  auto hum = bme.readHumidity();
-  auto pressure = bme.readPressure();
-  auto altitude = bme.readAltitude(SEALEVELPRESSURE_HPA);
-
-  displayInfo(ip, temp, hum, pressure, altitude);
-
-  auto json = getJson(temp, hum, pressure, altitude, ip);
-  Serial.println(json.c_str());
-
-  delay(5000);
+  Serial.println("waking");
+  doWork();
+  Serial.flush();
+  esp_light_sleep_start();
 }
