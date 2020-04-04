@@ -37,8 +37,7 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RST);
 
 String last_ip;
 
-void displayInfo(std::string text, float temp, float hum, float pressure,
-                 float altitude) {
+void displayInfo(float temp, float hum, float pressure, float altitude) {
   display.clearDisplay();
   display.setTextColor(WHITE, BLACK);
   display.setTextSize(1);
@@ -52,9 +51,6 @@ void displayInfo(std::string text, float temp, float hum, float pressure,
      << "Alt=" << altitude << "m" << std::endl
      << "P=" << pressure << "hPa" << std::endl;
 
-  if (text != "") {
-    ss << text << std::endl;
-  }
   display.print(ss.str().c_str());
   display.display();
 }
@@ -92,16 +88,16 @@ std::string requestIp() {
 }
 
 void doWork() {
-  auto ip = requestIp();
+  // auto ip = requestIp();
   auto temp = bme.readTemperature();
   auto hum = bme.readHumidity();
   auto pressure = bme.readPressure();
   auto altitude = bme.readAltitude(SEALEVELPRESSURE_HPA);
 
-  displayInfo(ip, temp, hum, pressure, altitude);
+  displayInfo(temp, hum, pressure, altitude);
 
-  auto json = getJson(temp, hum, pressure, altitude, ip);
-  Serial.println(json.c_str());
+  // auto json = getJson(temp, hum, pressure, altitude, ip);
+  // Serial.println(json.c_str());
 }
 
 void setup() {
