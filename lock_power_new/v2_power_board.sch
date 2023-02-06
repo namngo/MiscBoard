@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.6.2">
+<eagle version="9.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -17769,9 +17769,9 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="83.82" y="30.48" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="INTERFACE" gate="A" pin="3"/>
-<wire x1="-20.32" y1="10.16" x2="-12.7" y2="10.16" width="0.1524" layer="91"/>
-<label x="-12.7" y="10.16" size="1.27" layer="95" xref="yes"/>
+<pinref part="INTERFACE" gate="A" pin="2"/>
+<wire x1="-20.32" y1="7.62" x2="-12.7" y2="7.62" width="0.1524" layer="91"/>
+<label x="-12.7" y="7.62" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="+7V" class="0">
@@ -17809,9 +17809,9 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="SUPPLY5" gate="G$1" pin="+7V"/>
 </segment>
 <segment>
-<pinref part="INTERFACE" gate="A" pin="2"/>
-<wire x1="-20.32" y1="7.62" x2="-12.7" y2="7.62" width="0.1524" layer="91"/>
-<label x="-12.7" y="7.62" size="1.27" layer="95" xref="yes"/>
+<pinref part="INTERFACE" gate="A" pin="1"/>
+<wire x1="-20.32" y1="5.08" x2="-12.7" y2="5.08" width="0.1524" layer="91"/>
+<label x="-12.7" y="5.08" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="+UB" class="0">
@@ -17849,9 +17849,9 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="82.55" y="35.56" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="INTERFACE" gate="A" pin="1"/>
-<wire x1="-20.32" y1="5.08" x2="-12.7" y2="5.08" width="0.1524" layer="91"/>
-<label x="-12.7" y="5.08" size="1.27" layer="95" xref="yes"/>
+<pinref part="INTERFACE" gate="A" pin="3"/>
+<wire x1="-20.32" y1="10.16" x2="-12.7" y2="10.16" width="0.1524" layer="91"/>
+<label x="-12.7" y="10.16" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="G1" class="0">
