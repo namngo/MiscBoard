@@ -9939,7 +9939,7 @@ part number 2062-2P from STA</description>
 <part name="U_B1_1001011" library="INA226AIDGST" deviceset="INA226AIDGST" device="" value="INA233"/>
 <part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uf"/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="A1_I2C2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X2" device="" package3d_urn="urn:adsk.eagle:package:22455/2"/>
+<part name="B1_I2C" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X2" device="" package3d_urn="urn:adsk.eagle:package:22455/2"/>
 <part name="R11F" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="0"/>
 <part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="0"/>
 <part name="R13F" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="0"/>
@@ -9948,7 +9948,7 @@ part number 2062-2P from STA</description>
 <part name="U_B2_1001111" library="INA226AIDGST" deviceset="INA226AIDGST" device="" value="INA233"/>
 <part name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uf"/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="A1_I2C3" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X2" device="" package3d_urn="urn:adsk.eagle:package:22455/2"/>
+<part name="B2_I2C" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X2" device="" package3d_urn="urn:adsk.eagle:package:22455/2"/>
 <part name="R15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="0"/>
 <part name="R16F" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="0"/>
 <part name="R17F" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="0"/>
@@ -10167,7 +10167,7 @@ part number 2062-2P from STA</description>
 <instance part="GND5" gate="1" x="142.24" y="-20.32" smashed="yes">
 <attribute name="VALUE" x="139.7" y="-22.86" size="1.778" layer="96"/>
 </instance>
-<instance part="A1_I2C2" gate="A" x="66.04" y="-7.62" smashed="yes" rot="R90">
+<instance part="B1_I2C" gate="A" x="66.04" y="-7.62" smashed="yes" rot="R90">
 <attribute name="NAME" x="60.325" y="-16.51" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="71.12" y="-16.51" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -10202,7 +10202,7 @@ part number 2062-2P from STA</description>
 <instance part="GND6" gate="1" x="242.57" y="-21.59" smashed="yes">
 <attribute name="VALUE" x="240.03" y="-24.13" size="1.778" layer="96"/>
 </instance>
-<instance part="A1_I2C3" gate="A" x="166.37" y="-8.89" smashed="yes" rot="R90">
+<instance part="B2_I2C" gate="A" x="166.37" y="-8.89" smashed="yes" rot="R90">
 <attribute name="NAME" x="160.655" y="-17.78" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="171.45" y="-17.78" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -10274,12 +10274,12 @@ part number 2062-2P from STA</description>
 <label x="158.75" y="38.1" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="A1_I2C2" gate="A" pin="1"/>
+<pinref part="B1_I2C" gate="A" pin="1"/>
 <wire x1="63.5" y1="-12.7" x2="55.88" y2="-12.7" width="0.1524" layer="91"/>
 <label x="55.88" y="-12.7" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="A1_I2C3" gate="A" pin="1"/>
+<pinref part="B2_I2C" gate="A" pin="1"/>
 <wire x1="163.83" y1="-13.97" x2="156.21" y2="-13.97" width="0.1524" layer="91"/>
 <label x="156.21" y="-13.97" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -10305,12 +10305,12 @@ part number 2062-2P from STA</description>
 <label x="158.75" y="45.72" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="A1_I2C2" gate="A" pin="2"/>
+<pinref part="B1_I2C" gate="A" pin="2"/>
 <wire x1="63.5" y1="-5.08" x2="55.88" y2="-5.08" width="0.1524" layer="91"/>
 <label x="55.88" y="-5.08" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="A1_I2C3" gate="A" pin="2"/>
+<pinref part="B2_I2C" gate="A" pin="2"/>
 <wire x1="163.83" y1="-6.35" x2="156.21" y2="-6.35" width="0.1524" layer="91"/>
 <label x="156.21" y="-6.35" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -10764,7 +10764,7 @@ part number 2062-2P from STA</description>
 <pinref part="U_B1_1001011" gate="G$1" pin="SCL"/>
 <wire x1="93.98" y1="-7.62" x2="71.12" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="-7.62" x2="71.12" y2="-5.08" width="0.1524" layer="91"/>
-<pinref part="A1_I2C2" gate="A" pin="4"/>
+<pinref part="B1_I2C" gate="A" pin="4"/>
 <wire x1="71.12" y1="-5.08" x2="66.04" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="5.08" x2="71.12" y2="-5.08" width="0.1524" layer="91"/>
 <junction x="71.12" y="5.08"/>
@@ -10779,7 +10779,7 @@ part number 2062-2P from STA</description>
 <pinref part="R14" gate="G$1" pin="1"/>
 <wire x1="73.66" y1="20.32" x2="76.2" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="U_B1_1001011" gate="G$1" pin="SDA"/>
-<pinref part="A1_I2C2" gate="A" pin="3"/>
+<pinref part="B1_I2C" gate="A" pin="3"/>
 <wire x1="93.98" y1="-12.7" x2="73.66" y2="-12.7" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="-12.7" x2="66.04" y2="-12.7" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="10.16" x2="73.66" y2="-12.7" width="0.1524" layer="91"/>
@@ -10834,7 +10834,7 @@ part number 2062-2P from STA</description>
 <pinref part="U_B2_1001111" gate="G$1" pin="SCL"/>
 <wire x1="194.31" y1="-8.89" x2="171.45" y2="-8.89" width="0.1524" layer="91"/>
 <wire x1="171.45" y1="-8.89" x2="171.45" y2="-6.35" width="0.1524" layer="91"/>
-<pinref part="A1_I2C3" gate="A" pin="4"/>
+<pinref part="B2_I2C" gate="A" pin="4"/>
 <wire x1="171.45" y1="-6.35" x2="166.37" y2="-6.35" width="0.1524" layer="91"/>
 <wire x1="171.45" y1="3.81" x2="171.45" y2="-6.35" width="0.1524" layer="91"/>
 <junction x="171.45" y="3.81"/>
@@ -10849,7 +10849,7 @@ part number 2062-2P from STA</description>
 <pinref part="R18" gate="G$1" pin="1"/>
 <wire x1="173.99" y1="19.05" x2="176.53" y2="19.05" width="0.1524" layer="91"/>
 <pinref part="U_B2_1001111" gate="G$1" pin="SDA"/>
-<pinref part="A1_I2C3" gate="A" pin="3"/>
+<pinref part="B2_I2C" gate="A" pin="3"/>
 <wire x1="194.31" y1="-13.97" x2="173.99" y2="-13.97" width="0.1524" layer="91"/>
 <wire x1="173.99" y1="-13.97" x2="166.37" y2="-13.97" width="0.1524" layer="91"/>
 <wire x1="173.99" y1="8.89" x2="173.99" y2="-13.97" width="0.1524" layer="91"/>
