@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.6.0">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.005" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -10252,6 +10252,30 @@ part number 2062-2P from STA</description>
 <junction x="127" y="99.06"/>
 <label x="132.08" y="99.06" size="1.016" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="C1" gate="G$1" pin="1"/>
+<pinref part="U_A1_1001010" gate="G$1" pin="VS"/>
+<wire x1="142.24" y1="60.96" x2="129.54" y2="60.96" width="0.1524" layer="91"/>
+<label x="142.24" y="60.96" size="1.016" layer="95" rot="R90" xref="yes"/>
+</segment>
+<segment>
+<pinref part="C5" gate="G$1" pin="1"/>
+<pinref part="U_A2_1001110" gate="G$1" pin="VS"/>
+<wire x1="245.11" y1="60.96" x2="232.41" y2="60.96" width="0.1524" layer="91"/>
+<label x="243.84" y="60.96" size="1.016" layer="95" rot="R90" xref="yes"/>
+</segment>
+<segment>
+<pinref part="C6" gate="G$1" pin="1"/>
+<pinref part="U_B1_1001011" gate="G$1" pin="VS"/>
+<wire x1="142.24" y1="10.16" x2="129.54" y2="10.16" width="0.1524" layer="91"/>
+<label x="142.24" y="10.16" size="1.016" layer="95" rot="R90" xref="yes"/>
+</segment>
+<segment>
+<pinref part="C7" gate="G$1" pin="1"/>
+<pinref part="U_B2_1001111" gate="G$1" pin="VS"/>
+<wire x1="242.57" y1="8.89" x2="229.87" y2="8.89" width="0.1524" layer="91"/>
+<label x="241.3" y="10.16" size="1.016" layer="95" rot="R90" xref="yes"/>
+</segment>
 </net>
 <net name="SDA" class="0">
 <segment>
@@ -10385,13 +10409,6 @@ part number 2062-2P from STA</description>
 <pinref part="U5" gate="G$1" pin="EN"/>
 <wire x1="96.52" y1="93.98" x2="96.52" y2="99.06" width="0.1524" layer="91"/>
 <junction x="96.52" y="99.06"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="C1" gate="G$1" pin="1"/>
-<pinref part="U_A1_1001010" gate="G$1" pin="VS"/>
-<wire x1="142.24" y1="60.96" x2="129.54" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="A1_IN" class="0">
@@ -10677,13 +10694,6 @@ part number 2062-2P from STA</description>
 <label x="231.14" y="6.35" size="1.016" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="C5" gate="G$1" pin="1"/>
-<pinref part="U_A2_1001110" gate="G$1" pin="VS"/>
-<wire x1="245.11" y1="60.96" x2="232.41" y2="60.96" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$3" class="0">
 <segment>
 <pinref part="R9" gate="G$1" pin="1"/>
@@ -10747,13 +10757,6 @@ part number 2062-2P from STA</description>
 <wire x1="237.49" y1="53.34" x2="232.41" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$16" class="0">
-<segment>
-<pinref part="C6" gate="G$1" pin="1"/>
-<pinref part="U_B1_1001011" gate="G$1" pin="VS"/>
-<wire x1="142.24" y1="10.16" x2="129.54" y2="10.16" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$17" class="0">
 <segment>
 <pinref part="R13F" gate="G$1" pin="1"/>
@@ -10815,13 +10818,6 @@ part number 2062-2P from STA</description>
 <pinref part="U_B1_1001011" gate="G$1" pin="ALERT"/>
 <wire x1="134.62" y1="-2.54" x2="134.62" y2="2.54" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="2.54" x2="129.54" y2="2.54" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$25" class="0">
-<segment>
-<pinref part="C7" gate="G$1" pin="1"/>
-<pinref part="U_B2_1001111" gate="G$1" pin="VS"/>
-<wire x1="242.57" y1="8.89" x2="229.87" y2="8.89" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$26" class="0">
