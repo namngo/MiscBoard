@@ -1,6 +1,6 @@
 [Eagle]
-Version="09 06 00"
-Platform="Windows"
+Version="09 06 02"
+Platform="Linux"
 Globals="Globals"
 Desktop="Desktop"
 
@@ -25,8 +25,6 @@ UsedLibraryUrn="urn:adsk.eagle:library:408"
 UsedLibraryUrn="urn:adsk.eagle:library:409"
 UsedLibraryUrn="urn:adsk.eagle:library:86"
 UsedLibraryUrn="urn:adsk.eagle:library:87"
-UsedLibrary="H:/hobby/EagleCustomParts/AP2112K-3.3TRG1.lbr"
-UsedLibrary="H:/hobby/EagleCustomParts/CustomParts.lbr"
 UsedLibraryUrn="urn:adsk.eagle:library:108"
 UsedLibraryUrn="urn:adsk.eagle:library:14283568"
 
